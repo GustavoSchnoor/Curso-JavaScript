@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Programa</title>
+    <style>
+        body{
+            background-color: rgba(0, 0, 0, 0.781);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 28px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Ja me livrei da maldição kkk</p>
+
+    <script>
+        let n1 = parseInt(prompt('Digite um numero: ')); // Perguntamos um valor para ATRIBUIR a n1. Esse valor será atribuido como uma STRING
+        let n2 = parseInt(prompt('Digite outro numero: ')); // Utilizando o Prompt, a resposta SEMPRE vai ser uma STRING. Devemos lembrar, quando for atribuir a uma VARIÁVEL
+        let soma = n1 + n2;
+        alert(`A soma dos valores ${n1} + ${n2} é igual a ${soma}`);
+
+        // (Number + Number) Eu estou SOMANDO 2 números ou 2 variaveis numéricas.
+        // (String + String) Eu estou CONCATENANDO as 2 strings para juntar e ser uma frase completa, podendo atribuir a uma variável.
+        // (String + Number) Na hora que o JAVASCRIPT ler essa linha, ele vai automaticamente transformar o number em string, e o resultado vai sair concatenado.
+    </script>
+</body>
+</html>
