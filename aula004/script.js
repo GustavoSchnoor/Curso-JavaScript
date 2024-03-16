@@ -1,5 +1,2 @@
-let n = 200
+// ESSE É UM CAMPO DE TREINAMENTO POR ENQUANTO
 
-let qualTipo = typeof n
-
-console.log(qualTipo)
