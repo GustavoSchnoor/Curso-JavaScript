@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio DOM</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let button = document.createElement('button');
+        button.className = 'btn';
+        button.innerHTML = 'Um texto não foi alterado, <strong>clique aqui</strong>';
+        document.body.appendChild(button);
+
+        let getButton = document.querySelector('.btn');
+        let originalContent = getButton.innerHTML;
+        console.log(originalContent);
+
+        getButton.addEventListener('click', function() {
+            if (getButton.innerHTML === originalContent) {
+                getButton.innerHTML = 'Agora sim o texto foi alterado, graças ao seu <strong>CLICK</strong>';
+            } else {
+                getButton.innerHTML = originalContent;
+            }
+        })
+
+
+    </script>
+</body>
+</html>
