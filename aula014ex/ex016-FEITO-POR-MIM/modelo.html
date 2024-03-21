@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Exercício</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Vamos Contar</h1>
+    </header>
+
+    <section>
+        <div>
+            <label for="numInicio">Início:</label>
+            <input type="number" name="numInicio" id="numInicio">
+        </div>
+
+        <div>
+            <label for="numFim">Fim:</label>
+            <input type="number" name="numFim" id="numFim">
+        </div>
+
+        <div>
+            <label for="passo">Passo:</label>
+            <input type="number" name="passo" id="passo">
+        </div>
+
+        <div>
+            <input type="button" value="Contar" onclick="contar()">
+        </div>
+
+        <div>
+            <p id="campoContagem">
+                A contagem será feita aqui...
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Gustavo Schnoor</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
