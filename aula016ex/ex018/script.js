@@ -3,41 +3,40 @@ let selecaoNumero = document.querySelector('#selecaoNum');
 let divRes = document.querySelector('#res');
 let listaNum = [];
 
+// TESTA se o numero esta entre 1 e 100 e retorna para quem chamou
+function verificaNumero(numb) {
+    if (numb >= 1 && numb <= 100) {
+        return true;
+    } else {
+        return false;
+    }
+}
+// TESTA se o numero informado ja tem na lista.
+function verificaRepetido(numb) {
+    // Usando o indexOf(numb) se retornar -1 é porque NÃO tem esse numero na lista. Se retornar qualquer outro numero alem de -1, é porque tem na lista
+    if (listaNum.indexOf(numb) === -1) { 
+        return true;
+    } else {
+        return false;
+    }
+}
 
 function adicionar() {
     let numeroInformado = Number(numero.value);
     
-
-    // TESTA se o numero esta entre 1 e 100 e retorna para quem chamou
-    function verificaNumero(numb) {
-        if (numb >= 1 && numb <= 100) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-    // TESTA se o numero informado ja tem na lista.
-    function verificaRepetido(numb) {
-        // Usando o indexOf(numb) se retornar -1 é porque NÃO tem esse numero na lista. Se retornar qualquer outro numero alem de -1, é porque tem na lista
-        if (listaNum.indexOf(numb) === -1) { 
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-
     // Cria uma condição onde chamamos a função verificaNumero com o parametro do input number do HTML. Usamos o numero.value para pegar o valor, e dentro dele colocamos o Number() para ja trazer o valor convertido de string para numérico.
     if (verificaNumero(numeroInformado) && verificaRepetido(numeroInformado)) {
         listaNum.push(numeroInformado);
         let item = document.createElement('option');
-        item.text = `Valor ${numeroInformado} adicionado`;
+        item.innerHTML = `Valor ${numeroInformado} adicionado`;
         selecaoNumero.appendChild(item);
+        divRes.innerHTML = '';
         console.log(listaNum);
     } else {
         alert('Número inválido ou ja adicionado');
     }
-
+    numero.value = '';
+    numero.focus();
 }
 
 function finalizar() {
